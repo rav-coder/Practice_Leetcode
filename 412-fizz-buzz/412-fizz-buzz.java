@@ -3,12 +3,15 @@ class Solution {
         List<String> ans = new ArrayList <String> (n);
         
         for(int i = 1 ; i <= n ; i++){
+            
+            boolean div3 = (i%3 == 0);
+            boolean div5 = (i%5 == 0);
                    
-            if(i % 3 == 0 && i % 5 == 0){
+            if(div3 && div5){
                 ans.add("FizzBuzz");
-            } else if (i % 3 == 0){
+            } else if (div3){
                 ans.add("Fizz");
-            } else if ( i % 5 == 0) {
+            } else if (div5) {
                 ans.add("Buzz");
             } else{
                 ans.add(i + "");
